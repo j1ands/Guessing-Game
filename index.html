@@ -1,87 +1,47 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="./favicon.ico">
+    <title>Bootstrap 101 Template</title>
 
-    <title>Guessing Game</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom-style.css" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="./cover.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="./js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./Cover Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  <style id="holderjs-style" type="text/css"></style></head>
-
+  </head>
   <body>
 
-    <div class="site-wrapper">
+    <div class="container text-center">
+	<div class="jumbotron">
+	    <h1>Guessing Game</h1>
+	    <p class="lead">Play a simple game of hot or cold. Guess a number between 1 and 100.</p>
+	    <div>
+		    <form>
+			   <input class="form-control center-block" id="focusedInput" type="text" placeholder="Guess a Number">
+			   </input>
+		    </form>
+	    
+	    	<div class="btn-group" id="buttons">
+		    <button type="button" class="btn btn-primary btn-lg center-block">Play Again</button>
+		    <button type="button" class="btn btn-primary btn-lg center-block">Submit</button>
+		    <button type="button" class="btn btn-primary btn-lg center-block">Hint</button>
+	        </div>
+           </div>
 
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-             <!-- <h3 class="masthead-brand">Cover</h3>
-              <ul class="nav masthead-nav">
-                <li class="active"><a href="http://getbootstrap.com/examples/cover/#">Home</a></li>
-                <li><a href="http://getbootstrap.com/examples/cover/#">Features</a></li>
-                <li><a href="http://getbootstrap.com/examples/cover/#">Contact</a></li>
-	      </ul> -->
-            </div>
-          </div>
-
-          <div class="inner cover">
-            <h1 class="cover-heading">Guessing Game</h1>
-            <p class="lead">Play a simple game of hot or cold. Guess a number between 1 and 100.</p>
-	    <br /> 
-	    <input type="email" class="form-control" name="guess" placeholder="Guess a Number">
-	    <br />
-	    <br /> 
-	    <p class="lead">
-	      <a href="http://j1ands.github.io/Guessing-Game/#" class="btn btn-lg btn-default" background-color="#33CCFF">Submit</a>
-            <p class="lead">
-              <a href="http://j1ands.github.io/Guessing-Game/#" class="btn btn-lg btn-default">Play Again</a>
-	      <a href="http://j1ands.github.io/Guessing-Game/#" class="btn btn-lg btn-default">Hint</a>
-            </p>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
+	</div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/docs.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./js/ie10-viewport-bug-workaround.js"></script>
-  
-
-    </body>
-    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
