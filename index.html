@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>Guessing Game</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,26 +19,129 @@
   </head>
   <body>
 
-    <div class="container text-center">
-	<div class="jumbotron">
+  <div class="container text-center">
+	 <div class="jumbotron">
 	    <h1>Guessing Game</h1>
-	    <p class="lead">Play a simple game of hot or cold. Guess a number between 1 and 100.</p>
+	    <p>Play a simple game of hot or cold. Guess a number between 1 and 100.</p>
 	    <div>
-		    <form>
-			   <input class="form-control center-block" id="focusedInput" type="text" placeholder="Guess a Number">
-			   </input>
-		    </form>
-	    
-		    <!-- <div class="btn-group btn-group-justified center-block" id="buttons"> -->
-		<div class="btn-group-vertical" id="buttons">
-			<a class="btn btn-success btn-lg" role="button">Submit</a>
-			<a class="btn btn-primary btn-lg" role="button">Hint</a>
-			<a class="btn btn-danger btn-lg" role="button">Play Again</a>
-	        </div>
-           </div>
 
-	</div>
-    </div>
+		        <form class="guess-form">
+			       <input class="form-control center-block" id="focusedInput" type="text" placeholder="Guess a Number">
+			       </input>  
+		        </form>
+          
+        <!--  
+        <button type="button" class="btn btn-primary beenHid" data-toggle="modal" data-target=".bs-example-modal-sm">Improper Value</button>
+        -->
+
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="improper">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              Please enter a number between 1-100.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="sameNum">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              You already tried that number. Try again.
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="hint">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+            </div>
+          </div>
+        </div>        
+
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="gameOver">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+              Your ten attempts are up. 
+            
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Try Again</button>
+              </div>
+
+            </div>
+          </div>
+        </div>                   
+
+        <!-- <p  id="success">Success!</p> -->
+        <div class="alert alert-success" role="alert" id="success">
+        <strong>Success!</strong>
+        </div>
+
+        <div class="alert alert-info" role="alert" id="colder">
+        <strong></strong>
+        </div>
+
+        <!-- <p  id="failure">Failure!</p> -->
+	    
+        <div class="alert alert-danger" role="alert" id="warmer">
+        <strong></strong>
+        </div>
+		    <!-- <div class="btn-group btn-group-justified center-block" id="buttons"> -->
+
+        <!--
+        <div class="btn-group" id="guesses">
+          <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Previous Guesses <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+          </ul>
+            <!
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </div>
+          -->
+        <div class="row">  
+          <div class="col-md-12">
+              
+              <!--
+              <div class="btn-group" id="guesses">
+              <button type="button" class="btn btn-warning btn-lg">Previous Guesses</button>
+              <button type="button" class="btn btn-warning btn-lg dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+              </ul>
+              </div>
+             -->
+
+             <!-- Split button -->
+              <div class="btn-group beenHid" id="guesses">
+                <button type="button" class="btn btn-warning btn-lg">Previous Guesses</button>
+                <button type="button" class="btn btn-warning btn-lg dropdown-toggle" data-toggle="dropdown">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                </ul>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="btn-group-vertical" id="buttons">
+			       <a class="btn btn-success btn-lg" role="button">Submit</a>
+			       <a class="btn btn-primary btn-lg" role="button">Hint</a>
+			       <a class="btn btn-danger btn-lg" role="button">Play Again</a>
+	          </div>
+          </div>
+        </div>
+      </div>
+	 </div>
+  </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
