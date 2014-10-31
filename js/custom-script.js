@@ -220,14 +220,14 @@ function submitAnswer()
 		
 		var difference = guesses[gL() - 1] - randomNum;
 
-		if(guesses[gL() - 1] == randomNum)
-		{
-			success();
-		}
-
-		else if(!guessCheck())
+		if(!guessCheck())
 		{
 			gameOver();
+		}
+
+		else if(guesses[gL() - 1] == randomNum)
+		{
+			success();
 		}
 
 		else if(guesses.length == 1)
