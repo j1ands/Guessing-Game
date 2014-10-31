@@ -268,6 +268,7 @@ function submitAnswer()
 	{
 		if(!numCheck())
 		{
+			guesses.pop();
 			properNumMessage();
 		}
 		else
